@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de números</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="info">
+        <h1>Números Romanos</h1>
+        <div class="info-number">
+          <ul>
+            <h4>Números Reias</h4>
+            <li>1</li>
+            <li>5</li>
+            <li>10</li>
+            <li>50</li>
+            <li>100</li>
+            <li>500</li>
+            <li>1000</li>
+            <li>1000</li>
+            <li>5000</li>
+            <li>10000</li>
+            <li>50000</li>
+            <li>100000</li>
+            <li>500000</li>
+            <li>1000000</li>
+          </ul>
+          <ul>
+            <h4>Números Romanos</h4>
+            <li>I</li>
+            <li>V</li>
+            <li>X</li>
+            <li>L</li>
+            <li>C</li>
+            <li>D</li>
+            <li>M</li>
+            <li>I̅</li>
+            <li>V̅</li>
+            <li>X̅</li>
+            <li>L̅</li>
+            <li>C̅</li>
+            <li>D̅</li>
+            <li>M̅</li>
+          </ul>
+        </div>
+        <p>
+          Obs: os números romanso com traço na horizontal em cima significa que
+          o número está sendo multiplicado por mil.
+        </p>
+      </section>
+      <section class="calc">
+        <div class="conversion-real">
+          <h1>Conversor de Real > Romanos</h1>
+          <div class="conversion">
+            <div class="real-number">
+              <label for="real-number">Número real</label>
+              <input
+                type="number"
+                id="real-number"
+                placeholder="Digite o número"
+              />
+            </div>
+            <div class="romanos-number">
+              <label for="romanos-number">Número romanos</label>
+              <input
+                type="text"
+                id="result-romanos"
+                placeholder="Conversão"
+                disabled="true"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="conversion-romanos">
+          <div class="alert">
+            <h1>Conversor de Romanos > Real</h1>
+            <span class="tooltip-container"
+              ><i data-lucide="alert-circle"></i
+            ></span>
+            <span class="tooltiptext"
+              >Não é possivel converter números romanos igual ou maior que 4000!
+            </span>
+          </div>
+          <div class="conversion">
+            <div class="real-number">
+              <label for="real-number">Número Romanos</label>
+              <input
+                type="text"
+                id="romanos-number"
+                placeholder="Digite o número"
+                oninput="validarLetras(this)"
+              />
+            </div>
+            <div class="romanos-number">
+              <label for="romanos-number">Número real</label>
+              <input
+                type="text"
+                id="result-real"
+                placeholder="Conversão"
+                disabled="true"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a href="https://github.com/jp-xaxa" target="_blank"
+        >Feito por João Pedro</a
+      >
+    </footer>
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
